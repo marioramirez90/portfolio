@@ -1,0 +1,22 @@
+*,
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --font-color: #f5f1f1;
+  --background-color: #24292f;
+  font-family: monospace;
+  --line-color: #3e7bfa;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background-color: var(--background-color);
+  background-image: url(/src/assets/img/backgroud-efect.png);
+  background-size: 100%;
+}
