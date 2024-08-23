@@ -79,8 +79,8 @@ export default {
   text-decoration: none;
   margin-left: 4rem;
   transition:
-    transform 0.3s ease-in-out,
-    font-size 0.3s ease-in-out; /* Transition hinzugefügt */
+    transform 0.9s ease-in-out,
+    font-size 0.9s ease-in-out; /* Transition hinzugefügt */
 }
 
 .name:hover {
@@ -123,7 +123,7 @@ export default {
   background-color: var(--line-color);
   left: 0;
   bottom: -8px;
-  transition: width 0.3s ease-in-out;
+  transition: width 0.9s ease-in-out;
 }
 
 .navbar-links li:hover::after {
