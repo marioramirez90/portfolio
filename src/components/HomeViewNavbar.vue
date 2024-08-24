@@ -2,13 +2,14 @@
   <nav class="navbar">
     <div class="navbar-container">
       <div class="navbar-name">
-        <a class="name" href="#">Mario Ramirez</a>
+        <a class="myname" href="#">Mario Ramirez</a>
       </div>
       <ul :class="['navbar-links', { active: isMenuOpen }]">
         <li>
           <div class="github">
             <a href="https://github.com/marioramirez90">
-              <img class="logo" src="/src/assets/img/pngegg.png" alt="logo" /><a href="#"
+              <img class="logo" src="/src/assets/img/pngegg.png" alt="logo" /><a
+                href="https://github.com/marioramirez90"
                 >Github</a
               ></a
             >
@@ -16,7 +17,7 @@
         </li>
         <li><a href="#about-me">About me</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <button class="contact">Contact</button>
       </ul>
       <div class="navbar-toggle" @click="toggleMenu">
         <span class="navbar-icon"></span>
@@ -44,7 +45,9 @@ export default {
 
 <style scoped>
 .navbar {
-  padding: 0.7rem 5rem;
+  margin: o;
+  position: absolute;
+  padding: 0.5rem;
   position: relative;
   background-color: var(--background-color);
   box-shadow: 2px 2px 3px black;
@@ -66,24 +69,24 @@ export default {
 .navbar-container {
   padding: 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
+  margin-top: 0.8rem;
 }
 
-.name {
+.myname {
   font-size: 2rem;
   font-weight: bold;
   color: var(--font-color);
+
   text-decoration: none;
   margin-left: 4rem;
   transition:
     transform 0.9s ease-in-out,
-    font-size 0.9s ease-in-out; /* Transition hinzugefügt */
+    font-size 0.9s ease-in-out;
 }
 
-.name:hover {
+.myname:hover {
   scale: 1.2;
   font-size: 2.3rem;
   text-shadow: 1px 1px 2px rgb(7, 7, 7);
@@ -143,101 +146,17 @@ export default {
   margin: 4px;
   transition: 0.4s;
 }
-@media (max-width: 1024px) {
-  .navbar {
-    padding: 0.7rem 2rem;
-  }
 
-  .navbar-container {
-    padding: 0.5rem 1rem;
-  }
-
-  .navbar-name a {
-    font-size: 1.8rem;
-    margin-left: 2rem;
-  }
-
-  .navbar-links {
-    gap: 2rem;
-  }
-
-  .logo {
-    width: 18px;
-  }
+.contact {
+  background-color: var(--line-color);
+  padding: 0.5rem 1.5rem;
+  border-radius: 3rem;
+  margin-top: -0.3rem;
+  border: none;
+  box-shadow: 3px 3px 9px black;
+  font-weight: 600;
 }
-
-@media (max-width: 900px) {
-  .navbar {
-    padding: 0.7rem 1.5rem;
-  }
-
-  .navbar-container {
-    padding: 0.5rem 0.5rem;
-  }
-
-  .navbar-name a {
-    font-size: 1.5rem;
-    margin-left: 1rem;
-  }
-
-  .navbar-links {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: #333;
-    flex-direction: column;
-    align-items: center;
-    display: none;
-    gap: 1.5rem;
-    padding: 1rem;
-  }
-
-  .navbar-links a {
-    padding: 1rem;
-    font-size: 1.2rem;
-  }
-
-  .navbar-toggle {
-    display: flex;
-  }
-
-  .navbar-links.active {
-    display: flex;
-  }
-
-  .logo {
-    width: 16px;
-    gap: -4px;
-  }
-}
-
-@media (max-width: 480px) {
-  .navbar {
-    padding: 0.7rem 1rem;
-  }
-
-  .navbar-container {
-    padding: 0.5rem;
-  }
-
-  .navbar-name a {
-    font-size: 1.3rem;
-    margin-left: 0.5rem;
-  }
-
-  .navbar-links {
-    gap: 1rem;
-    padding: 0.5rem;
-  }
-
-  .navbar-links a {
-    padding: 0.8rem;
-    font-size: 1rem;
-  }
-
-  .logo {
-    width: 14px;
-  }
+.contact:hover {
+  background-color: aqua;
 }
 </style>

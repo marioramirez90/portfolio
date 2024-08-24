@@ -9,14 +9,18 @@
   --font-color: #f5f1f1;
   --background-color: #24292f;
   font-family: monospace;
-  --line-color: #3e7bfa;
+  --line-color: #00ffc3;
+  --steps: 16;
+  --background: #1d1f20;
 }
 
 body {
+  width: 100%;
   margin: 0;
   padding: 0;
-
   background-color: var(--background-color);
   background-image: url(/src/assets/img/backgroud-efect.png);
-  background-size: 100%;
+  background-size: 60%;
+  background-attachment: fixed;
+  background-repeat: repeat-y;
 }
