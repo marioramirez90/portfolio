@@ -80,6 +80,7 @@ export default {}
   color: white;
   border-radius: 0 -89rem 0 0;
   text-justify: distribute;
+  padding-bottom: 9rem;
 }
 
 .aboutme-content h1 {

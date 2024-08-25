@@ -4,7 +4,8 @@
 ::after {
   box-sizing: border-box;
 }
-
+html {
+}
 :root {
   --font-color: #f5f1f1;
   --background-color: #24292f;

@@ -19,7 +19,7 @@
         <li><a href="#projects">Projects</a></li>
         <button class="contact">Contact</button>
       </ul>
-      <div class="navbar-toggle" @click="toggleMenu">
+      <div :class="['navbar-toggle', { open: isMenuOpen }]" @click="toggleMenu">
         <span class="navbar-icon"></span>
         <span class="navbar-icon"></span>
         <span class="navbar-icon"></span>
@@ -158,5 +158,42 @@ export default {
 }
 .contact:hover {
   background-color: aqua;
+}
+
+.navbar-toggle {
+  width: 60px;
+  height: 45px;
+  position: relative;
+  margin: 0 auto;
+}
+.navbar-toggle span {
+  width: 100%;
+  height: 9px;
+  border-radius: 10px;
+  background: var(--line-color);
+  position: absolute;
+  transform: rotate(0deg);
+  transition: 0.25sec ease-in-out;
+}
+span:nth-child(1) {
+  top: 0px;
+}
+span:nth-child(2),
+span:nth-child(3) {
+  top: 10px;
+}
+span:nth-child(4) {
+  top: 36px;
+}
+.navbar-toggle.open span:nth-child(1),
+.navbar-toggle.open {
+  opacity: 0;
+  width: 0;
+}
+.navbar-toggle.open span:nth-child(2) {
+  transform: rotate(45deg);
+}
+.navbar-toggle.open span:nth-child(3) {
+  transform: rotate(-45deg);
 }
 </style>
