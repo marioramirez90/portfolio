@@ -33,6 +33,7 @@ export default {}
   display: flex;
   justify-content: end;
   margin-bottom: 1rem;
+  padding-bottom: 4rem;
 }
 .name {
   display: flex;
@@ -80,7 +81,8 @@ export default {}
   color: white;
   border-radius: 0 -89rem 0 0;
   text-justify: distribute;
-  padding-bottom: 9rem;
+  padding-bottom: 15rem;
+  padding-top: 10rem;
 }
 
 .aboutme-content h1 {
@@ -96,7 +98,7 @@ export default {}
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
-    margin-bottom: 1px;
+    margin-bottom: 4rem;
   }
 }
 .aboutme-content p {
