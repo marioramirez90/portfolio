@@ -17,7 +17,11 @@
         </li>
         <li><a href="#about-me">About me</a></li>
         <li><a href="#projects">Projects</a></li>
-        <button class="contact">Contact</button>
+
+        <button>
+          Button
+          <span></span>
+        </button>
       </ul>
       <div :class="['navbar-toggle', { open: isMenuOpen }]" @click="toggleMenu">
         <span class="navbar-icon"></span>
@@ -45,49 +49,30 @@ export default {
 
 <style scoped>
 .navbar {
-  margin: o;
-  position: absolute;
-  padding: 0.5rem;
-  position: relative;
   background-color: var(--background-color);
-  box-shadow: 2px 2px 3px black;
+  box-shadow: 1px 5px 8rem black;
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
 }
-.github {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.github:hover {
-  scale: 1.1;
-  gap: 1rem;
-}
-
-.logo {
-  width: 20px;
-}
-
 .navbar-container {
-  padding: 1rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: 0.8rem;
+  padding: 1rem;
 }
 
 .myname {
   font-size: 2rem;
   font-weight: bold;
   color: var(--font-color);
-
   text-decoration: none;
-  margin-left: 4rem;
   transition:
     transform 0.9s ease-in-out,
     font-size 0.9s ease-in-out;
 }
 
 .myname:hover {
-  scale: 1.2;
+  transform: scale(1.2);
   font-size: 2.3rem;
   text-shadow: 1px 1px 2px rgb(7, 7, 7);
 }
@@ -108,92 +93,176 @@ export default {
   font-size: 1.5rem;
   font-weight: 600;
   display: flex;
-
   gap: 1.5rem;
+  position: relative;
 }
 
-.navbar-links a:hover {
-  scale: 1.2;
-}
-
-.navbar-links li::after {
+.navbar-links a::after {
   content: '';
   position: absolute;
-  width: 0%;
-  border-radius: 2rem;
-  font-size: 2rem;
+  width: 0;
   height: 0.3rem;
   background-color: var(--line-color);
   left: 0;
-  bottom: -8px;
-  transition: width 0.9s ease-in-out;
+  bottom: -4px;
+  border-radius: 2rem;
+  transition: width 0.3s ease-in-out;
 }
 
-.navbar-links li:hover::after {
+.navbar-links a:hover::after {
   width: 100%;
+}
+
+.github {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition:
+    transform 0.3s ease-in-out,
+    gap 0.3s ease-in-out;
+}
+
+.github:hover {
+  transform: scale(1.1);
+  gap: 1rem;
+}
+
+.logo {
+  width: 20px;
 }
 
 .navbar-toggle {
   display: none;
-  flex-direction: column;
   cursor: pointer;
-}
-
-.navbar-toggle span {
-  width: 25px;
-  height: 3px;
-  background-color: #fff;
-  margin: 4px;
-  transition: 0.4s;
-}
-
-.contact {
-  background-color: var(--line-color);
-  padding: 0.5rem 1.5rem;
-  border-radius: 3rem;
-  margin-top: -0.3rem;
-  border: none;
-  box-shadow: 3px 3px 9px black;
-  font-weight: 600;
-}
-.contact:hover {
-  background-color: aqua;
-}
-
-.navbar-toggle {
-  width: 60px;
-  height: 45px;
   position: relative;
-  margin: 0 auto;
+  width: 30px;
+  height: 30px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
-.navbar-toggle span {
+
+.navbar-icon {
   width: 100%;
-  height: 9px;
-  border-radius: 10px;
-  background: var(--line-color);
-  position: absolute;
-  transform: rotate(0deg);
-  transition: 0.25sec ease-in-out;
+  height: 3px;
+  background-color: var(--line-color);
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
 }
-span:nth-child(1) {
-  top: 0px;
+
+.navbar-toggle.open .navbar-icon:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 10px);
 }
-span:nth-child(2),
-span:nth-child(3) {
-  top: 10px;
-}
-span:nth-child(4) {
-  top: 36px;
-}
-.navbar-toggle.open span:nth-child(1),
-.navbar-toggle.open {
+
+.navbar-toggle.open .navbar-icon:nth-child(2) {
   opacity: 0;
-  width: 0;
 }
-.navbar-toggle.open span:nth-child(2) {
-  transform: rotate(45deg);
+
+.navbar-toggle.open .navbar-icon:nth-child(3) {
+  transform: rotate(-45deg) translate(10px, -10px);
 }
-.navbar-toggle.open span:nth-child(3) {
-  transform: rotate(-45deg);
+
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--background-color);
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(-100%);
+    opacity: 0;
+    margin-top: 0.1rem;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+    box-shadow: 1px 1px 8px rgb(7, 7, 7);
+  }
+
+  .navbar-links.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .navbar-container {
+    justify-content: space-between;
+  }
+}
+
+button {
+  border: none;
+  display: block;
+  position: relative;
+  padding: 0.5em 2em;
+  font-size: 18px;
+  background: transparent;
+  cursor: pointer;
+  user-select: none;
+  overflow: hidden;
+  color: rgb(14, 235, 176);
+  z-index: 1;
+  font-family: inherit;
+  font-weight: 500;
+  top: -0.67rem;
+}
+
+button span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: -1;
+  border: 4px solid rgb(14, 235, 176);
+}
+
+button span::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 8%;
+  height: 500%;
+  background: var(--background-color);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-60deg);
+  transition: all 0.7s;
+}
+
+button:hover span::before {
+  transform: translate(-50%, -50%) rotate(-90deg);
+  width: 100%;
+  background: rgb(14, 235, 176);
+}
+
+button:hover {
+  color: white;
+}
+
+button:active span::before {
+  background: #2751cd;
+}
+
+.github {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition:
+    transform 0.3s ease-in-out,
+    gap 0.3s ease-in-out;
+}
+
+.github:hover {
+  transform: scale(1.1);
+  gap: 1rem;
+}
+
+.logo {
+  width: 20px;
 }
 </style>
