@@ -1,76 +1,123 @@
 <template>
   <section class="projects">
+    <div class="project-name">
+      <h1>Meine Projekte</h1>
+    </div>
     <div class="projects-container">
-      <div class="project-1">
-        <div class="project-img">
-          <img
-            class="projects-img-futurama"
-            src="/src/assets/img/Design ohne Titel (1).png"
-            alt=""
-          />
-        </div>
-        <div class="project-content">
-          <h4 class="project-content-heading">Futurama Project</h4>
-          <p class="project-text">built with HTML,CSS,JAVASCRIPT</p>
-
-          <div class="project-info">
-            Das "Futurama Raketen Spiel" ist ein 2D-Arcade-Spiel, bei dem man eine Rakete steuert
-            und UFOs abschießt, um Punkte zu sammeln.
+      <div class="project-3d">
+        <div class="project-1">
+          <div class="project-img">
+            <img
+              class="projects-img-futurama"
+              src="/src/assets/img/Design ohne Titel (1).png"
+              alt=""
+            />
           </div>
-          <div class="projects-button">
-            <button>Github</button>
-            <button>Live Test</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-1">
-        <div class="project-img">
-          <img
-            class="projects-img-futurama"
-            src="/src/assets/img/Design ohne Titel (2).png"
-            alt=""
-          />
-        </div>
-        <div class="project-content">
-          <h4 class="project-content-heading">Futurama Project</h4>
-          <p class="project-text">built with HTML,CSS,JAVASCRIPT</p>
-
-          <div class="project-info">
-            Das "Futurama Raketen Spiel" ist ein 2D-Arcade-Spiel, bei dem man eine Rakete steuert
-            und UFOs abschießt, um Punkte zu sammeln.
-          </div>
-          <div class="projects-button">
-            <button>Github</button>
-            <button>Live Test</button>
+          <div class="project-content">
+            <h4 class="project-content-heading">Futurama Project</h4>
+            <p class="project-text">built with HTML, CSS, JAVASCRIPT</p>
+            <div class="project-info">
+              Das "Futurama Raketen Spiel" ist ein 2D-Arcade-Spiel, bei dem man eine Rakete steuert
+              und UFOs abschießt, um Punkte zu sammeln.
+            </div>
+            <div class="projects-button">
+              <button>Github</button>
+              <button>Live Test</button>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="project-1">
-        <div class="project-img">
-          <img class="projects-img-futurama" src="/src/assets/img/Design ohne Titel.png" alt="" />
-        </div>
-        <div class="project-content">
-          <h4 class="project-content-heading">Futurama Project</h4>
-          <p class="project-text">built with HTML,CSS,JAVASCRIPT</p>
-
-          <div class="project-info">
-            Das "Futurama Raketen Spiel" ist ein 2D-Arcade-Spiel, bei dem man eine Rakete steuert
-            und UFOs abschießt, um Punkte zu sammeln.
+      <div class="project-3d">
+        <div class="project-1">
+          <div class="project-img">
+            <img
+              class="projects-img-futurama"
+              src="/src/assets/img/Design ohne Titel (2).png"
+              alt=""
+            />
           </div>
-          <div class="projects-button">
-            <button>Github</button>
-            <button>Live Test</button>
+          <div class="project-content">
+            <h4 class="project-content-heading">To-Do-APP</h4>
+            <p class="project-text">built with HTML, CSS, JAVASCRIPT</p>
+            <div class="project-info">
+              diese ToDo-App kann Aufgaben hinzufügen, als erledigt markieren und nach
+              offenen,erledigten Aufgaben filtern und löschen.
+            </div>
+            <div class="projects-button">
+              <button @click="openInNewTab('https://github.com/marioramirez90/To-do-App')">
+                Github
+              </button>
+              <button @click="openInNewTab('https://marioramirez90.github.io/To-do-App/')">
+                Live Test
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-3d">
+        <div class="project-1">
+          <div class="project-img">
+            <img class="projects-img-futurama" src="/src/assets/img/Design ohne Titel.png" alt="" />
+          </div>
+          <div class="project-content">
+            <h4 class="project-content-heading">TheardHub</h4>
+            <p class="project-text">built with Vue.js</p>
+            <div class="project-info">
+              ThreadHub ist eine Frage-Antwort-App, die es Nutzern ermöglicht, Fragen zu stellen und
+              Antworten von der Community zu erhalten.
+            </div>
+            <div class="projects-button">
+              <button
+                @click="
+                  openInNewTab(
+                    'https://github.com/coding-bootcamps-eu/final-project-2024-05-threadhub'
+                  )
+                "
+              >
+                github
+              </button>
+              <button @click="openInNewTab('https://threadhub.netlify.app/login')">
+                Live Test
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 </template>
+
 <script>
-export default {}
+export default {
+  methods: {
+    openInNewTab(url) {
+      window.open(url, '_blank')
+    }
+  },
+  mounted() {
+    const projects = document.querySelectorAll('.project-1')
+
+    projects.forEach((project) => {
+      project.addEventListener('mousemove', (e) => {
+        const rect = project.getBoundingClientRect()
+        const x = (e.clientX - rect.left) / rect.width
+        const y = (e.clientY - rect.top) / rect.height
+
+        project.style.setProperty('--mouse-x', x)
+        project.style.setProperty('--mouse-y', y)
+      })
+
+      project.addEventListener('mouseleave', () => {
+        project.style.setProperty('--mouse-x', 0.5)
+        project.style.setProperty('--mouse-y', 0.5)
+      })
+    })
+  }
+}
 </script>
+
 <style scoped>
 .projects {
   background-color: var(--background-color);
@@ -80,39 +127,56 @@ export default {}
 
   border-top: 3px solid var(--line-color);
 }
+
+.project-name {
+  text-align: end;
+  margin-top: 7rem;
+  font-size: 3rem;
+  color: var(--line-color);
+  font-weight: 900;
+  @supports (background-clip: text) or (-webkit-background-clip: text) {
+    background-image: url("data:image/svg+xml,%3Csvg width='2250' height='900' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath fill='%2300A080' d='M0 0h2255v899H0z'/%3E%3Ccircle cx='366' cy='207' r='366' fill='%2300FDCF'/%3E%3Ccircle cx='1777.5' cy='318.5' r='477.5' fill='%2300FDCF'/%3E%3Ccircle cx='1215' cy='737' r='366' fill='%23008060'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-size: 30% auto;
+    background-position: center;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    justify-content: center;
+    text-align: center;
+  }
+}
 .projects-container {
   display: flex;
   flex-wrap: wrap;
   padding-top: 4rem;
   padding-bottom: 4rem;
-  margin-left: 0.66rem;
-  margin-right: 0.66rem;
+  margin-left: 0.7rem;
+  margin-right: 0.7rem;
   padding: 5rem;
-  margin: 4rem;
+  margin: 2rem;
+}
+.project-3d {
+  flex: 1 0 0px;
+  perspective: 30rem;
+  margin: 1.5rem;
 }
 .project-1 {
-  flex: 1 0 0px;
-  margin: 0 1.5rem;
   background-color: white;
-  box-shadow: 0.5rem 0.5rem 2rem black;
+  box-shadow: 0.5rem 0.5rem 1rem black;
   border-left: 0.5px solid rgba(128, 128, 128, 0.53);
   border-right: 0.5px solid rgba(128, 128, 128, 0.502);
   border-top: 0.5px solid rgba(128, 128, 128, 0.505);
   border-bottom: 0.75rem solid mediumspringgreen;
-  position: relative;
   padding-bottom: 3rem;
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
 }
 
-.project-1::after {
-  content: '';
-  display: block;
-  bottom: 0;
-  position: absolute;
-  left: 0px;
-  right: -1px;
-  height: 0.75rem;
-  background-color: mediumspringgreen;
+.project-1:hover {
+  transform: rotateX(calc((var(--mouse-y, 0.5) - 0.5) * -15deg))
+    rotateY(calc((var(--mouse-x, 0.5) - 0.5) * 15deg));
 }
+
 .project-img {
   position: relative;
   background-color: var(--line-color);
@@ -158,6 +222,7 @@ export default {}
   padding-top: 1rem;
   padding-bottom: 1rem;
   display: flex;
+  max-height: 6rem;
 }
 
 .projects-button {
@@ -169,11 +234,48 @@ export default {}
 .projects-button button {
   font-size: 1rem;
   font-weight: 700;
-  border-radius: 5px;
+  border-radius: 12px;
   padding: 1rem 3rem;
-  border: 1px solid med;
+  border: 0.2px solid black;
+  background-color: white;
+}
+.projects-button button:hover {
+  border: 1px solid mediumspringgreen;
 }
 .projects-button :last-child {
-  background-color: mediumspringgreen;
+  background: linear-gradient(to bottom right, #04ecc9, #5affd3);
+  border: 0;
+  border-radius: 12px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 2rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow 0.2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+.projects-button button:last-child:not([disabled]):focus {
+  box-shadow:
+    0 0 0.25rem rgba(0, 0, 0, 0.5),
+    -0.125rem -0.125rem 1rem rgba(15, 219, 165, 0.5),
+    0.125rem 0.125rem 1rem rgba(5, 184, 220, 0.5);
+}
+
+.projects-button button:last-child:not([disabled]):hover {
+  box-shadow:
+    0 0 0.25rem rgba(0, 0, 0, 0.5),
+    -0.125rem -0.125rem 1rem rgba(4, 118, 72, 0.5),
+    0.125rem 0.125rem 1rem rgba(6, 241, 190, 0.5);
+}
+
+.project-3d {
+  perspective: 50rem;
 }
 </style>

@@ -107,4 +107,38 @@ export default {}
   font-weight: 400;
   margin-bottom: 5px;
 }
+@media (max-width: 768px) {
+  .about-me {
+    justify-content: center;
+  }
+
+  .name {
+    margin: 2rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    margin-top: 5rem;
+  }
+
+  .name h2 {
+    font-size: 1.5rem;
+  }
+
+  .name p {
+    font-size: 2.5rem;
+  }
+
+  .aboutme-content {
+    left: 0;
+    padding: 2rem;
+    border-radius: 0;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+    box-shadow: none;
+  }
+
+  .aboutme-content p {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
 </style>
