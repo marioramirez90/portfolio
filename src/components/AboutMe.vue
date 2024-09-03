@@ -33,7 +33,7 @@ export default {}
   display: flex;
   justify-content: end;
   margin-bottom: 1rem;
-  padding-bottom: 4rem;
+  padding-bottom: 5rem;
 }
 .name {
   display: flex;
