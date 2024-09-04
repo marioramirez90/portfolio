@@ -5,6 +5,7 @@
     <HomeViewMySkills />
     <HomeViewProject />
     <HomeViewContact />
+    <HomeViewFooter />
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import AboutMe from '@/components/AboutMe.vue'
 import HomeViewProject from '@/components/HomeViewProject.vue'
 import HomeViewMySkills from '@/components/HomeViewMySkills.vue'
 import HomeViewContact from '@/components/HomeViewContact.vue'
+import HomeViewFooter from '@/components/HomeViewFooter.vue'
 
 export default {
   components: {
@@ -21,7 +23,8 @@ export default {
     AboutMe,
     HomeViewProject,
     HomeViewMySkills,
-    HomeViewContact
+    HomeViewContact,
+    HomeViewFooter
   }
 }
 </script>

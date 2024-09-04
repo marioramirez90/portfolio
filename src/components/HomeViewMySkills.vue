@@ -129,6 +129,7 @@ export default {
   top: 8rem;
   padding-bottom: 15rem;
   padding-top: 5rem;
+  margin-bottom: 20rem;
 }
 .my-skills {
   text-align: center;
