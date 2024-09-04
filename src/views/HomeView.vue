@@ -4,6 +4,7 @@
     <div class="about"><AboutMe /></div>
     <HomeViewMySkills />
     <HomeViewProject />
+    <HomeViewContact />
   </div>
 </template>
 
@@ -12,13 +13,15 @@ import HomeViewNavbar from '/src/components/HomeViewNavbar.vue'
 import AboutMe from '@/components/AboutMe.vue'
 import HomeViewProject from '@/components/HomeViewProject.vue'
 import HomeViewMySkills from '@/components/HomeViewMySkills.vue'
+import HomeViewContact from '@/components/HomeViewContact.vue'
 
 export default {
   components: {
     HomeViewNavbar,
     AboutMe,
     HomeViewProject,
-    HomeViewMySkills
+    HomeViewMySkills,
+    HomeViewContact
   }
 }
 </script>

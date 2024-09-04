@@ -19,7 +19,7 @@
         <li><a href="#projects">Projects</a></li>
 
         <button>
-          Button
+          Contact
           <span></span>
         </button>
       </ul>

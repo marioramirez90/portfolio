@@ -1,27 +1,30 @@
 <template>
   <div class="about-me">
     <div class="name">
-      <h2>Hello! my Name is</h2>
+      <h2>Hallo! Mein Name ist</h2>
       <h1>Mario Ramirez</h1>
       <p>FRONTEND DEVELOPER</p>
     </div>
   </div>
   <div class="aboutme-content">
-    <h1>About Me</h1>
+    <h1>Über mich</h1>
     <p>
-      Hello, I am a front-end developer from Germany. I am 34 years old and live with my wife and
-      our children in Hamburg. My strengths include commitment, reliability, communication skills,
-      and self-reflection.
+      Hallo, ich bin ein Frontend-Entwickler aus Deutschland. Ich bin 34 Jahre alt und lebe mit
+      meiner Frau und unseren Kindern in Hamburg. Zu meinen Stärken zählen Engagement,
+      Zuverlässigkeit, Kommunikationsfähigkeit und die Freude an der Teamarbeit.
     </p>
 
     <p>
-      I developed my front-end skills primarily through my training at Coding Bootcamp Europe in
-      Berlin, where I had the opportunity to work on numerous projects. You can find a selection of
-      these projects in the portfolio section.
+      Meine Fähigkeiten in der Frontend-Entwicklung habe ich vor allem durch meine Ausbildung beim
+      Coding Bootcamp Europe in Berlin weiterentwickelt, wo ich die Gelegenheit hatte, an
+      zahlreichen Projekten mitzuwirken. Eine Auswahl dieser Projekte finden Sie im
+      Portfolio-Bereich.
     </p>
     <p>
-      I especially enjoy working in agile teams, the challenging nature of software development, and
-      the wide range of learning opportunities it offers. I am excited to take on more projects!
+      Ich fühle mich in agilen Teams besonders wohl, da ich die kreative Zusammenarbeit und die
+      Dynamik der Softwareentwicklung schätze. Die ständige Herausforderung und die vielen
+      Möglichkeiten, dazuzulernen, motivieren mich, mein Wissen und meine Fähigkeiten kontinuierlich
+      zu erweitern. Ich freue mich darauf, an neuen, spannenden Projekten mitzuwirken!
     </p>
   </div>
 </template>

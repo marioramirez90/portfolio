@@ -1,10 +1,10 @@
 <template>
   <div class="skills-container">
     <div class="my-skills-name">
-      <h1>My skills</h1>
+      <h1>Meine Fähigkeiten</h1>
       <p>
-        I have honed my frontend development skills, enabling me to successfully create and deploy a
-        variety of real-world projects.
+        Ich habe meine Fähigkeiten in der Frontend-Entwicklung geschärft und bin in der Lage,
+        erfolgreich eine Vielzahl von praxisnahen Projekten zu erstellen und umzusetzen.
       </p>
     </div>
     <div class="my-skills">
