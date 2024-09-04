@@ -122,7 +122,7 @@ export default {
 .projects {
   background-color: var(--background-color);
   padding-top: 7rem;
-  padding-bottom: 5rem;
+  padding-bottom: 20rem;
   box-shadow: 1px 5px 8rem black;
 
   border-top: 3px solid var(--line-color);
