@@ -75,7 +75,7 @@ export default {}
 .aboutme-content {
   display: flex;
   flex-direction: column;
-  border-top: 2px solid rgb(0, 255, 200);
+  border-top: 7px solid rgb(0, 255, 195);
   left: 19rem;
   text-align: left;
   background-color: var(--background-color);
@@ -85,7 +85,7 @@ export default {}
   border-radius: 0 -89rem 0 0;
   text-justify: distribute;
   padding-bottom: 15rem;
-  padding-top: 10rem;
+  padding-top: 7rem;
 }
 
 .aboutme-content h1 {

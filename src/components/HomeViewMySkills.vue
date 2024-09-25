@@ -126,10 +126,10 @@ export default {
   position: relative;
   gap: 1rem;
   right: 0;
-  top: 8rem;
+  top: 2.5rem;
   padding-bottom: 15rem;
   padding-top: 5rem;
-  margin-bottom: 20rem;
+  margin-bottom: 15;
 }
 .my-skills {
   text-align: center;

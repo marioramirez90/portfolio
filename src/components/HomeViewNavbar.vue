@@ -51,7 +51,7 @@ export default {
 .navbar {
   background-color: var(--background-color);
   box-shadow: 1px 5px 8rem black;
-  padding-top: 1.5rem;
+  padding-top: 1rem;
   padding-bottom: 0.5rem;
 }
 .navbar-container {

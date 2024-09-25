@@ -121,7 +121,7 @@ export default {
 <style scoped>
 .projects {
   background-color: var(--background-color);
-  padding-top: 7rem;
+  padding-top: -4rem;
   padding-bottom: 20rem;
   box-shadow: 1px 5px 8rem black;
 
