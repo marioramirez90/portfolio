@@ -121,11 +121,10 @@ export default {
 <style scoped>
 .projects {
   background-color: var(--background-color);
-  padding-top: -4rem;
-  padding-bottom: 20rem;
+  padding-bottom: 15rem;
   box-shadow: 1px 5px 8rem black;
 
-  border-top: 3px solid var(--line-color);
+  border-top: 7px solid var(--line-color);
 }
 
 .project-name {
