@@ -4,9 +4,12 @@
       <h2>Hallo! Mein Name ist</h2>
       <h1>Mario Ramirez</h1>
       <p>FRONTEND DEVELOPER</p>
+
+      <img class="img" src="/src/assets/img/pngwing.com.png" alt="img" @click="scrollToContent" />
     </div>
   </div>
-  <div class="aboutme-content">
+
+  <div class="aboutme-content" ref="aboutMeSection">
     <h1>Über mich</h1>
     <p>
       Hallo, ich bin ein Frontend-Entwickler aus Deutschland. Ich bin 34 Jahre alt und lebe mit
@@ -29,15 +32,59 @@
   </div>
 </template>
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      scrollOffsets: [625, 750, 740, 1400],
+      clickCount: 0
+    }
+  },
+  methods: {
+    scrollToContent() {
+      if (this.clickCount < this.scrollOffsets.length) {
+        const offset = this.scrollOffsets[this.clickCount]
+        window.scrollBy({
+          top: offset,
+          behavior: 'smooth'
+        })
+        this.clickCount++
+      } else {
+        console.log('Alle Scroll-Abstände wurden bereits verwendet.')
+      }
+    }
+  }
+}
 </script>
+
 <style scoped>
 .about-me {
   display: flex;
   justify-content: end;
+  height: 100vh;
   margin-bottom: 1rem;
   padding-bottom: 5rem;
 }
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.img {
+  position: fixed;
+  bottom: 3rem;
+  left: 50%;
+  width: 40px;
+  animation: float 3s ease-in-out infinite;
+  cursor: pointer;
+  z-index: 10;
+}
+
 .name {
   display: flex;
   flex-direction: column;
