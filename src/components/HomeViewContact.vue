@@ -45,22 +45,22 @@ export default {
         email: '',
         message: ''
       },
-      isSending: false // Zustand für die Senden-Animation
+      isSending: false
     }
   },
   methods: {
     sendEmail() {
-      this.isSending = true // Start der Senden-Animation
+      this.isSending = true
       emailjs
         .send(
-          'service_phuf10b', // Dein EmailJS Service ID
-          'template_e5yb4dh', // Deine EmailJS Template ID
+          'service_phuf10b',
+          'template_e5yb4dh',
           {
             name: this.form.name,
             email: this.form.email,
             message: this.form.message
           },
-          'your_user_id' // Deine EmailJS User ID
+          'your_user_id'
         )
         .then(
           () => {
@@ -73,7 +73,7 @@ export default {
           }
         )
         .finally(() => {
-          this.isSending = false // Ende der Senden-Animation
+          this.isSending = false
         })
     },
     resetForm() {
@@ -166,7 +166,7 @@ export default {
 
 .submit-button {
   width: 100%;
-  background-color: transparent; /* Transparenter Hintergrund */
+  background-color: transparent;
   color: var(--line-color);
   border: 2px solid var(--line-color);
   padding: 0.75rem 1.5rem;
@@ -219,5 +219,35 @@ export default {
 
 .contact-info a:hover {
   color: #00a080;
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 2rem;
+    margin-top: 5rem;
+  }
+
+  .contact-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .contact-form {
+    padding: 1rem;
+  }
+
+  .input-group input,
+  .input-group textarea {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .submit-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .contact-info p {
+    font-size: 1rem;
+  }
 }
 </style>

@@ -123,7 +123,6 @@ export default {
   background-color: var(--background-color);
   padding-bottom: 15rem;
   box-shadow: 1px 5px 8rem black;
-
   border-top: 7px solid var(--line-color);
 }
 
@@ -276,5 +275,49 @@ export default {
 
 .project-3d {
   perspective: 50rem;
+}
+
+@media (max-width: 768px) {
+  .project-name {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  .project-name h1 {
+    font-size: 3rem;
+  }
+
+  .projects-container {
+    padding: 2rem;
+    margin: 0;
+  }
+
+  .project-3d {
+    flex: 1 0 100%;
+    margin: 1rem 0;
+  }
+
+  .project-1 {
+    padding: 2rem;
+  }
+
+  .project-content-heading {
+    font-size: 1.5rem;
+  }
+
+  .project-text,
+  .project-info {
+    font-size: 0.9rem;
+  }
+
+  .projects-button {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .projects-button button {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
 }
 </style>

@@ -220,4 +220,42 @@ export default {
   text-decoration: none;
   cursor: pointer;
 }
+@media (max-width: 768px) {
+  .skills-container {
+    margin: 1rem;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 7rem;
+    margin-top: 0;
+  }
+
+  .my-skills-name h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .my-skills-name p {
+    text-align: center;
+  }
+
+  .my-skills {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    padding: 0;
+  }
+
+  .my-skills img {
+    width: 64px;
+  }
+
+  .my-skills p {
+    font-size: 1rem;
+  }
+
+  .popup-content {
+    width: 80%;
+    height: auto;
+    margin: 20% auto;
+  }
+}
 </style>

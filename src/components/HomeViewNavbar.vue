@@ -18,10 +18,14 @@
         <li><a href="#about-me">About me</a></li>
         <li><a href="#projects">Projects</a></li>
 
-        <button>
-          Contact
-          <span></span>
-        </button>
+        <li>
+          <a href="mailto:mario-ramirez@hotmail.de" class="contact-button">
+            <button>
+              Kontakt
+              <span></span>
+            </button>
+          </a>
+        </li>
       </ul>
       <div :class="['navbar-toggle', { open: isMenuOpen }]" @click="toggleMenu">
         <span class="navbar-icon"></span>
@@ -113,6 +117,61 @@ export default {
   width: 100%;
 }
 
+button {
+  border: none;
+  display: block;
+  position: relative;
+  padding: 0.5em 2em;
+  font-size: 18px;
+  background: transparent;
+  cursor: pointer;
+  user-select: none;
+  overflow: hidden;
+  color: rgb(14, 235, 176);
+  z-index: 1;
+  font-family: inherit;
+  font-weight: 500;
+  top: -0.67rem;
+}
+
+button span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: -1;
+  border: 4px solid rgb(14, 235, 176);
+}
+
+button span::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 8%;
+  height: 500%;
+  background: var(--background-color);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-60deg);
+  transition: all 0.7s;
+}
+
+button:hover span::before {
+  transform: translate(-50%, -50%) rotate(-90deg);
+  width: 100%;
+  background: rgb(14, 235, 176);
+}
+
+button:hover {
+  color: white;
+}
+
+button:active span::before {
+  background: #2751cd;
+}
+
 .github {
   display: flex;
   align-items: center;
@@ -190,79 +249,7 @@ export default {
 
   .navbar-container {
     justify-content: space-between;
+    margin: 0.5rem;
   }
-}
-
-button {
-  border: none;
-  display: block;
-  position: relative;
-  padding: 0.5em 2em;
-  font-size: 18px;
-  background: transparent;
-  cursor: pointer;
-  user-select: none;
-  overflow: hidden;
-  color: rgb(14, 235, 176);
-  z-index: 1;
-  font-family: inherit;
-  font-weight: 500;
-  top: -0.67rem;
-}
-
-button span {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  z-index: -1;
-  border: 4px solid rgb(14, 235, 176);
-}
-
-button span::before {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 8%;
-  height: 500%;
-  background: var(--background-color);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-60deg);
-  transition: all 0.7s;
-}
-
-button:hover span::before {
-  transform: translate(-50%, -50%) rotate(-90deg);
-  width: 100%;
-  background: rgb(14, 235, 176);
-}
-
-button:hover {
-  color: white;
-}
-
-button:active span::before {
-  background: #2751cd;
-}
-
-.github {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition:
-    transform 0.3s ease-in-out,
-    gap 0.3s ease-in-out;
-}
-
-.github:hover {
-  transform: scale(1.1);
-  gap: 1rem;
-}
-
-.logo {
-  width: 20px;
 }
 </style>

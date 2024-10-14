@@ -35,7 +35,7 @@
 export default {
   data() {
     return {
-      scrollOffsets: [625, 750, 740, 1400],
+      scrollOffsets: [625, 750, 740, 1459],
       clickCount: 0
     }
   },
@@ -123,7 +123,6 @@ export default {
   display: flex;
   flex-direction: column;
   border-top: 7px solid rgb(0, 255, 195);
-  left: 19rem;
   text-align: left;
   background-color: var(--background-color);
   padding: 5rem;
@@ -159,24 +158,24 @@ export default {
 }
 @media (max-width: 768px) {
   .about-me {
+    align-items: center;
+    padding-top: 3rem;
+    margin-bottom: 3rem;
     justify-content: center;
+    text-align: center;
   }
-
   .name {
-    margin: 2rem;
-    padding: 1rem;
+    margin: 1.5rem;
+    padding: 0.5rem;
     font-size: 1.5rem;
     margin-top: 5rem;
   }
-
   .name h2 {
     font-size: 1.5rem;
   }
-
   .name p {
-    font-size: 2.5rem;
+    font-size: 2.13rem;
   }
-
   .aboutme-content {
     left: 0;
     padding: 2rem;
@@ -184,8 +183,13 @@ export default {
     padding-bottom: 5rem;
     padding-top: 5rem;
     box-shadow: none;
+    width: 100%;
+    text-align: center;
+    box-shadow: 1px 5px 8rem black;
   }
-
+  .aboutme-content h1 {
+    font-size: 3rem;
+  }
   .aboutme-content p {
     width: 100%;
     font-size: 1rem;
