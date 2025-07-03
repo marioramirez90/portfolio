@@ -21,7 +21,7 @@
               und UFOs abschießt, um Punkte zu sammeln.
             </div>
             <div class="projects-button">
-              <button>Github</button>
+              <button @click="openInNewTab('https://github.com/marioramirez90/Futurama-game')">Github</button>
               <button @click="openInNewTab('https://futuramagame.netlify.app/')">Live Test</button>
             </div>
           </div>
