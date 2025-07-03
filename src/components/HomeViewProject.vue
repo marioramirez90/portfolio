@@ -22,7 +22,7 @@
             </div>
             <div class="projects-button">
               <button>Github</button>
-              <button>Live Test</button>
+              <button @click="openInNewTab('https://futuramagame.netlify.app/')">Live Test</button>
             </div>
           </div>
         </div>
