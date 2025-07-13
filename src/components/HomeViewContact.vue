@@ -51,27 +51,23 @@ export default {
   methods: {
     sendEmail() {
       this.isSending = true
+
+      const templateParams = {
+        name: this.form.name,
+        email: this.form.email,
+        message: this.form.message
+      }
+
       emailjs
-        .send(
-          'service_phuf10b',
-          'template_e5yb4dh',
-          {
-            name: this.form.name,
-            email: this.form.email,
-            message: this.form.message
-          },
-          'your_user_id'
-        )
-        .then(
-          () => {
-            alert('Nachricht wurde erfolgreich gesendet!')
-            this.resetForm()
-          },
-          (error) => {
-            alert('Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut.')
-            console.error(error)
-          }
-        )
+        .send('service_5674xfu', 'template_e5yb4dh', templateParams, 'U6EKnbmfW61uAMCMf')
+        .then(() => {
+          alert('Nachricht wurde erfolgreich gesendet!')
+          this.resetForm()
+        })
+        .catch((error) => {
+          console.error('Email-Fehler:', error)
+          alert('Fehler beim Senden. Bitte später erneut versuchen.')
+        })
         .finally(() => {
           this.isSending = false
         })
