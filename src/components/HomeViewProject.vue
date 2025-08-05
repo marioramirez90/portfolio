@@ -39,16 +39,14 @@
             <h4 class="project-content-heading">Sign-UP</h4>
             <p class="project-text">built with HTML, CSS, JAVASCRIPT</p>
             <div class="project-info">
-              diese ToDo-App kann Aufgaben hinzufügen, als erledigt markieren und nach
-              offenen,erledigten Aufgaben filtern und löschen.
+              Diese Demo-App ermöglicht Registrierung und Anmeldung. Nutzer können sich
+              registrieren, einloggen und den Login-Vorgang testen.
             </div>
             <div class="projects-button">
-              <button @click="openInNewTab('https://github.com/marioramirez90/To-do-App')">
+              <button @click="openInNewTab('https://github.com/marioramirez90/log-in')">
                 Github
               </button>
-              <button @click="openInNewTab('https://marioramirez90.github.io/To-do-App/')">
-                Live Test
-              </button>
+              <button @click="openInNewTab('https://loginmr.netlify.app/')">Live Test</button>
             </div>
           </div>
         </div>
