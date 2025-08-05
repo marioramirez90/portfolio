@@ -21,8 +21,34 @@
               und UFOs abschießt, um Punkte zu sammeln.
             </div>
             <div class="projects-button">
-              <button @click="openInNewTab('https://github.com/marioramirez90/Futurama-game')">Github</button>
+              <button @click="openInNewTab('https://github.com/marioramirez90/Futurama-game')">
+                Github
+              </button>
               <button @click="openInNewTab('https://futuramagame.netlify.app/')">Live Test</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-3d">
+        <div class="project-1">
+          <div class="project-img">
+            <img class="projects-img-futurama" src="/portfolio/src/assets/img/singup.jpg" alt="" />
+          </div>
+          <div class="project-content">
+            <h4 class="project-content-heading">Sign-UP</h4>
+            <p class="project-text">built with HTML, CSS, JAVASCRIPT</p>
+            <div class="project-info">
+              diese ToDo-App kann Aufgaben hinzufügen, als erledigt markieren und nach
+              offenen,erledigten Aufgaben filtern und löschen.
+            </div>
+            <div class="projects-button">
+              <button @click="openInNewTab('https://github.com/marioramirez90/To-do-App')">
+                Github
+              </button>
+              <button @click="openInNewTab('https://marioramirez90.github.io/To-do-App/')">
+                Live Test
+              </button>
             </div>
           </div>
         </div>
