@@ -33,7 +33,7 @@
       <div class="project-3d">
         <div class="project-1">
           <div class="project-img">
-            <img class="projects-img-futurama" src="/src/assets/img/singup.jpg" alt="" />
+            <img class="projects-img-futurama" src="/src/assets/img/signup.png" alt="" />
           </div>
           <div class="project-content">
             <h4 class="project-content-heading">Sign-UP</h4>
