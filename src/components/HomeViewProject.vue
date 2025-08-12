@@ -55,6 +55,30 @@
       <div class="project-3d">
         <div class="project-1">
           <div class="project-img">
+            <img class="projects-img-futurama" src="/src/assets/img/Piratsworld.png" alt="" />
+          </div>
+          <div class="project-content">
+            <h4 class="project-content-heading">PirateWorld</h4>
+            <p class="project-text">build with Godot 4</p>
+            <div class="project-info">
+              Retro-Piraten-Plattformer mit zwei Levels. Bewegen mit Pfeiltasten (links/rechts),
+              springen mit Leertaste, angreifen mit E.
+            </div>
+            <div class="projects-button">
+              <button @click="openInNewTab('https://github.com/marioramirez90/PirateGame')">
+                Github
+              </button>
+              <button @click="openInNewTab('https://comforting-platypus-ddaaa2.netlify.app/')">
+                Live Test
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-3d">
+        <div class="project-1">
+          <div class="project-img">
             <img
               class="projects-img-futurama"
               src="/src/assets/img/Design ohne Titel (2).png"
