@@ -15,8 +15,8 @@
             >
           </div>
         </li>
-        <li><a href="/portfolio/src/components/AboutMe.vue">About me</a></li>
-        <li><a href="/portfolio/src/components/HomeViewProject.vue">Projects</a></li>
+        <li><a href="/src/components/AboutMe.vue">About me</a></li>
+        <li><a href="/src/components/HomeViewProject.vue">Projects</a></li>
 
         <li>
           <a href="mailto:mario-ramirez@hotmail.de" class="contact-button">
